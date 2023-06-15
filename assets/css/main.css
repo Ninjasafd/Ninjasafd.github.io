@@ -214,6 +214,7 @@ a:hover {
 	border-bottom-color: transparent;
 	color: #49bf9d !important;
 	text-decoration: none;
+	transform: scale(1.3);
 }
 
 strong,
@@ -2576,7 +2577,6 @@ input[type="button"]:hover,
 .button:hover {
 	border-color: #49bf9d;
 	color: #49bf9d !important;
-	transform: scale(1.3);
 }
 
 input[type="submit"]:active,

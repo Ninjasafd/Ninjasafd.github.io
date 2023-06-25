@@ -1847,3 +1847,39 @@ body.is-article-visible #footer {
 body.is-preload #footer {
 	opacity: 0;
 }
+
+.text-\[\#25b2da\] {
+    --tw-text-opacity: 1;
+	color: rgb(25 178 218/var(--tw-text-opacity));
+}
+
+.container-split {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .image-intro img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+  }
+
+  .content-split {
+    padding: 0 20px;
+  }
+
+  .content-split h2.major {
+    margin-top: 0;
+  }
+
+  .space-after-about {
+    margin-bottom: 20;
+  }
+
+  .space-before-about {
+    margin-top: 100px;
+	margin-bottom: 100px;
+	text-align: center;
+  }

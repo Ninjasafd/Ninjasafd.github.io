@@ -120,7 +120,7 @@ body {
 }
 
 .rounded-full {
-	border-radius: 9999px;
+	border-radius: 99999px;
 }
 
 ol,
@@ -257,7 +257,6 @@ a {
 	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-	border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 	text-decoration: none;
 	color: inherit;
 }
@@ -368,11 +367,7 @@ sub {
 	top: 0.5rem;
 }
 
-sup {
-	
-
-	
-}
+sup {}
 
 h3 {
 	font-size: 1rem;
@@ -402,7 +397,7 @@ h6 {
 		line-height: 1.5;
 	}
 
-	
+
 
 }
 
@@ -1118,6 +1113,7 @@ table tbody tr {
 	border-right: 0;
 }
 
+
 table tbody tr:nth-child(2n + 1) {
 	background-color: rgba(255, 255, 255, 0.075);
 }
@@ -1514,6 +1510,13 @@ body.is-preload #bg:before {
 	display: none;
 }
 
+.no-hover {
+	text-decoration: none;
+	color: inherit;
+
+}
+
+
 #header .logo {
 	width: 5.5rem;
 	height: 5.5rem;
@@ -1902,23 +1905,26 @@ body.is-preload #footer {
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: center;
-  }
-  
-  .image-intro {
+}
+
+.image-intro {
 	flex: 0 0 auto;
-	margin-right: 20px; /* Adjust the spacing between image and text */
-  }
-  
-  .image-intro img {
-	max-width: 80%; /* Adjust the maximum width of the image */
+	margin-right: 20px;
+	/* Adjust the spacing between image and text */
+}
+
+.image-intro img {
+	max-width: 80%;
+	/* Adjust the maximum width of the image */
 	height: auto;
-  }
-  
-  .content-split {
+}
+
+.content-split {
 	flex: 0 0 auto;
-	max-width: 600px; /* Adjust the maximum width of the text */
+	max-width: 600px;
+	/* Adjust the maximum width of the text */
 	margin-right: auto
-  }
+}
 
 .content-split h2.major {
 	margin-top: 0;
@@ -1935,8 +1941,9 @@ body.is-preload #footer {
 }
 
 .margin-right-long {
-	margin-right: 175px; /* Adjust the value to your desired margin */
-  }
+	margin-right: 175px;
+	/* Adjust the value to your desired margin */
+}
 
 
 
@@ -2623,7 +2630,7 @@ video {
 }
 
 .h-auto {
-	height: auto
+	height: fit-content
 }
 
 .h-\[500px\] {
@@ -2854,6 +2861,12 @@ video {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+}
+
+.space-y-2>:not([hidden])~:not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
 }
 
 .space-y-8>:not([hidden])~:not([hidden]) {
@@ -3466,7 +3479,7 @@ video {
 	}
 
 	.h-auto {
-		height:  auto
+		height: auto
 	}
 
 	.xl\:h-\[150px\] {
@@ -3503,5 +3516,30 @@ video {
 		padding-left: 2.5rem;
 		padding-right: 2.5rem
 	}
+}
+
+
+/* Add custom scrollbar styles */
+::-webkit-scrollbar {
+	width: 12px;
+	/* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgba(120, 120, 120);
+	/* Set the background color of the track */
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+	background: rgba(32, 170, 177, .7);
+	/* Set the color of the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(32, 170, 177);
+	/* Set the color of the thumb on hover */
 }
 

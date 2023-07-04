@@ -330,6 +330,46 @@ h2 {
 	font-size: 1.5rem;
 	line-height: 1.4;
 	letter-spacing: 0.5rem;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+h4 {
+	font-size: 0.8rem;
+}
+
+h5 {
+	font-size: 0.7rem;
+}
+
+h6 {
+	font-size: 0.6rem;
+}
+
+@media screen and (max-width: 736px) {
+
+	h1 {
+		font-size: 1.75rem;
+		line-height: 1.4;
+	}
+
+	h2 {
+		font-size: 1.25em;
+		line-height: 1.5;
+	}
+
+}
+
+sub {
+	font-size: 0.8rem;
+	position: relative;
+	top: 0.5rem;
+}
+
+sup {
+	
 
 	
 }
@@ -2948,6 +2988,10 @@ video {
 	padding-bottom: .5rem
 }
 
+.pb-5 {
+	padding-bottom: 1.25rem
+}
+
 .pt-5 {
 	padding-top: 1.25rem
 }
@@ -3280,6 +3324,10 @@ video {
 	--scrollbar-thumb: rgba(32, 170, 177, .5) !important
 }
 
+.scrollbar-thumb-\[\#20AAB1\]\/23 {
+	--scrollbar-thumb: rgba(32, 170, 177, .3) !important
+}
+
 .group:hover .group-hover\:bg-white {
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255/var(--tw-bg-opacity))
@@ -3318,6 +3366,10 @@ video {
 
 	.md\:h-24 {
 		height: 6rem
+	}
+
+	.md\:h-\[600px\] {
+		height: 200px
 	}
 
 	.md\:w-64 {
@@ -3411,6 +3463,10 @@ video {
 
 	.xl\:h-\[800px\] {
 		height: 800px
+	}
+
+	.h-auto {
+		height:  auto
 	}
 
 	.xl\:h-\[150px\] {

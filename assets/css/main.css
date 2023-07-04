@@ -1087,6 +1087,8 @@ ul.icons li a {
 	width: 2.25rem;
 }
 
+
+
 ul.icons li a:hover {
 	background-color: rgba(255, 255, 255, 0.075);
 }
@@ -3543,3 +3545,8 @@ video {
 	/* Set the color of the thumb on hover */
 }
 
+
+.fade
+{
+    opacity:0;
+}

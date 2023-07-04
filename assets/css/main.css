@@ -3414,6 +3414,11 @@ video {
 		width: 600px;
 	}
 
+	.xl\:w-\[650px\] {
+
+		width: 650px;
+	}
+
 	.md\:w-60 {
 		width: 15rem
 	}

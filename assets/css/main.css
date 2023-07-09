@@ -1942,10 +1942,7 @@ body.is-preload #footer {
 	text-align: center;
 }
 
-.margin-right-long {
-	margin-right: 175px;
-	/* Adjust the value to your desired margin */
-}
+
 
 
 
@@ -3474,6 +3471,11 @@ video {
 		font-size: 3.75rem;
 		line-height: 1
 	}
+
+	.margin-right-long {
+		margin-right: 175px;
+		/* Adjust the value to your desired margin */
+	}
 }
 
 @media (min-width:1280px) {
@@ -3487,6 +3489,10 @@ video {
 
 	.h-auto {
 		height: auto
+	}
+
+	.w-auto {
+		width: auto
 	}
 
 	.xl\:h-\[150px\] {
@@ -3555,3 +3561,19 @@ video {
 {
     opacity:0;
 }
+
+@media (min-width: 480px) {
+	
+	.md\:h-\[200px\] {
+		height: 200px
+	}
+
+	.h-auto {
+		height: auto
+	}
+
+	.xl\:h-\[400px\] {
+		height: 400px
+	}
+  }
+  

@@ -17,9 +17,11 @@
 	</noscript>
 </head>
 
+<section id="hero"> </section>
+
 <header class="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
 	<div class="flex flex-row items-center" style="opacity: 1; transform: none; text-decoration: none; "><a
-			href="https://github.com/Ninjasafd" class="social-icon" aria-label="github"
+			href="https://github.com/Ninjasafd" class="social-icon slide-left" aria-label="github"
 			style="display: inline-block; width: 50px; height: 50px; position: relative; overflow: hidden; vertical-align: middle; margin-right: 2px;">
 			<div class="social-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
 				<svg class="social-svg" viewBox="0 0 64 64"
@@ -43,7 +45,8 @@
 
 		</a><a href="https://www.linkedin.com/in/jeffrey-pan-a352491b5/" class="social-icon" aria-label="linkedin"
 			style="display: inline-block; width: 50px; height: 50px; position: relative; overflow: hidden; vertical-align: middle;">
-			<div class="social-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
+			<div class="social-container slide-left"
+				style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
 				<svg class="social-svg" viewBox="0 0 64 64"
 					style="border-radius: 50%; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; fill-rule: evenodd;">
 					<g class="social-svg-background" style="transition: fill 170ms ease-in-out 0s; fill: transparent;">
@@ -64,7 +67,7 @@
 		</a></div>
 
 	<div class="flex flex-row items-center text-gray-300" style="opacity: 1; transform: none;"><a href="#contact"
-			class="social-icon cursor-pointer" aria-label="email"
+			class="social-icon cursor-pointer slide-right smooth-scroll" aria-label="email"
 			style="display: inline-block; width: 50px; height: 50px; position: relative; overflow: hidden; vertical-align: middle;">
 			<div class="social-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
 				<svg class="social-svg" viewBox="0 0 64 64"
@@ -92,7 +95,7 @@
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-
+		
 
 
 		<!-- Header -->
@@ -333,7 +336,7 @@
 		<ul class="icons">
 			<li><a href="https://www.linkedin.com/in/jeffrey-pan-a352491b5/" class="icon brands fa-linkedin"><span
 						class="label">LinkedIn</span></a></li>
-			<li><a href="https://github.com/Ninjasafd" class="icon brands fa-github"><span
+			<li><a href="https://github.com/Ninjasafd" class="icon brands fa-github"><span	
 						class="label">GitHub</span></a></li>
 			<li><a href="mailto:JeffreyPan95@gmail.com" class="icon solid fa-envelope"><span
 						class="label">Mail</span></a></li>
@@ -343,12 +346,17 @@
 
 
 
-		<!-- Footer -->
-		<!-- <footer id="footer">
-						<p class="copyright">&copy>HTML5 UP</a>.</p>
-					</footer> -->
-
 	</div>
+	
+		<!-- Footer -->
+		<a href="#hero">
+			<footer class="sticky  w-full cursor-pointer slide-up">
+				<div class="flex items-center justify-center"><img
+						class="h-8 w-8 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+						src="https://ps.w.org/back-to-the-top-button/assets/icon-256x256.png?rev=2283756"
+						alt="scroll to top"></div>
+			</footer>
+		</a>
 
 	<!-- BG -->
 	<div id="bg"></div>
@@ -360,6 +368,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/fade.js"></script>
+	<script src="assets/js/smooth-scroll.js"></script>
 
 </body>
 

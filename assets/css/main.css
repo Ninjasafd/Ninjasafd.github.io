@@ -3577,3 +3577,64 @@ video {
 	}
   }
   
+  .slide-left {
+	animation: slideLeft 1s ease-in-out;
+	opacity: 1;
+  }
+  
+  .slide-right {
+	animation: slideRight 1s ease-in-out;
+	opacity: 1;
+  }
+
+  .slide-up {
+	animation: slideUp 2s ease-in-out forwards;
+	transform: translateY(0); /* Change this line */
+  }
+  
+  @keyframes slideLeft {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes slideRight {
+	from {
+	  transform: translateX(100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+
+  @keyframes slideUp {
+	from {
+	  transform: translateY(100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  html {
+	scroll-behavior: smooth;
+  }
+
+  footer.sticky {
+    position: fixed;
+    bottom: 2%;
+    z-index: 999;
+	display: flex;
+	justify-content: center;
+	transform: translateY(100%);
+  }
+

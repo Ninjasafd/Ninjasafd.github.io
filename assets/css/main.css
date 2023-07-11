@@ -3629,7 +3629,7 @@ video {
 	scroll-behavior: smooth;
   }
 
-  footer.sticky {
+  .footer-sticky {
     position: fixed;
     bottom: 2%;
     z-index: 999;
@@ -3638,3 +3638,12 @@ video {
 	transform: translateY(100%);
   }
 
+  .image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .bottom-space {
+	height: 25px; /* Adjust the height as needed */
+  }

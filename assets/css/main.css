@@ -3660,7 +3660,7 @@ html {
 	position: relative;
 	overflow: hidden;
 	margin: 0.5rem 0 1rem 0;
-	background-color: #fff;
+	background-color:rgb(41 41 41);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -3674,16 +3674,28 @@ html {
 	padding-bottom: 30px;
 }
 
-.card .card-content {
-	padding: 20px;
-	-webkit-border-radius: 0 0 2px 2px;
-	-moz-border-radius: 0 0 2px 2px;
-	border-radius: 0 0 2px 2px;
-	background-clip: padding-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.card-content {
+    padding: 20px;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+.row.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row.text-center > div {
+    flex: 1;
+    text-align: center;
+}
+
 
 .container .row {
 	margin-left: -0.75rem;
@@ -3708,7 +3720,6 @@ footer.page-footer .footer-copyright {
 .row .col.m2 {
 	width: 16.66667%;
 	margin-left: 0;
-
 }
 
 .row .col.s4 {
@@ -3726,4 +3737,13 @@ footer.page-footer .footer-copyright {
 
 .brown-text {
 	color: #795548 !important;
+}
+
+#skills .col img.responsive-img {
+    margin: 0 auto;
+    max-height: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
 }

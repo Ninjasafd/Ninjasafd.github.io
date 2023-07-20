@@ -3654,13 +3654,10 @@ html {
 
 .card {
 	margin-bottom: 60px;
-}
-
-.card {
 	position: relative;
 	overflow: hidden;
 	margin: 0.5rem 0 1rem 0;
-	background-color:rgb(41 41 41);
+	background-color: rgb(41 41 41);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -3671,30 +3668,42 @@ html {
 }
 
 .card .card-content {
-	padding-bottom: 30px;
-}
-
-.card-content {
-    padding: 20px;
-    -webkit-border-radius: 0 0 2px 2px;
-    -moz-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
-    background-clip: padding-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	padding: 20px;
+	-webkit-border-radius: 0 0 2px 2px;
+	-moz-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+	background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 800px; /* Set a fixed width that fits exactly 5 elements */
+	margin: 0 auto; /* Center the card content */
 }
 
 .row.text-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 .row.text-center > div {
-    flex: 1;
-    text-align: center;
+	width: 100px; /* Set a fixed width for each .col element */
+	text-align: center;
+	margin: 20px; /* Adjust the margin between the .col elements */
 }
+
+@media (max-width: 600px) {
+	.row.text-center > div {
+		width: calc(100% - 20px); /* Adjust the width for smaller screens */
+	}
+}
+
+@media (max-width: 400px) {
+	.row.text-center > div {
+		width: calc(50% - 20px); /* Adjust the width for even smaller screens */
+	}
+}
+
+
 
 
 .container .row {

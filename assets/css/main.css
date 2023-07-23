@@ -3061,7 +3061,7 @@ video {
 }
 
 .font-semibold {
-	font-weight: 600
+	font-weifght: 600
 }
 
 .font-bold {
@@ -3553,13 +3553,12 @@ video {
 }
 
 
-.fade
-{
-    opacity:0;
+.fade {
+	opacity: 0;
 }
 
 @media (min-width: 480px) {
-	
+
 	.md\:h-\[200px\] {
 		height: 200px
 	}
@@ -3575,75 +3574,236 @@ video {
 	.xl\:h-\[400px\] {
 		height: 400px
 	}
-  }
-  
-  .slide-left {
+}
+
+.slide-left {
 	animation: slideLeft 1s ease-in-out;
 	opacity: 1;
-  }
-  
-  .slide-right {
+}
+
+.slide-right {
 	animation: slideRight 1s ease-in-out;
 	opacity: 1;
-  }
+}
 
-  .slide-up {
+.slide-up {
 	animation: slideUp 2s ease-in-out forwards;
-	transform: translateY(0); /* Change this line */
-  }
-  
-  @keyframes slideLeft {
-	from {
-	  transform: translateX(-100%);
-	  opacity: 0;
-	}
-	to {
-	  transform: translateX(0);
-	  opacity: 1;
-	}
-  }
-  
-  @keyframes slideRight {
-	from {
-	  transform: translateX(100%);
-	  opacity: 0;
-	}
-	to {
-	  transform: translateX(0);
-	  opacity: 1;
-	}
-  }
+	transform: translateY(0);
+	/* Change this line */
+}
 
-  @keyframes slideUp {
+@keyframes slideLeft {
 	from {
-	  transform: translateY(100%);
-	  opacity: 0;
+		transform: translateX(-100%);
+		opacity: 0;
 	}
+
 	to {
-	  transform: translateY(0);
-	  opacity: 1;
+		transform: translateX(0);
+		opacity: 1;
 	}
-  }
-  
-  html {
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+html {
 	scroll-behavior: smooth;
-  }
+}
 
-  .footer-sticky {
-    position: fixed;
-    bottom: 2%;
-    z-index: 999;
+.footer-sticky {
+	position: fixed;
+	bottom: 2%;
+	z-index: 999;
 	display: flex;
 	justify-content: center;
 	transform: translateY(100%);
-  }
+}
 
-  .image-container {
+.image-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.bottom-space {
+	height: 25px;
+	/* Adjust the height as needed */
+}
+
+.card {
+	margin-bottom: 60px;
+	position: relative;
+	overflow: hidden;
+	margin: 0.5rem 0 1rem 0;
+	background-color: rgb(41 41 41);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
+}
+
+.card .card-content {
+	padding: 20px;
+	-webkit-border-radius: 0 0 2px 2px;
+	-moz-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+	background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 1000px; /* Set a fixed width that fits exactly 5 elements */
+	margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    /* For screens wider than 600px, set a fixed width for the card content */
+    .card .card-content {
+        width: 600px;
+    }
+}
+
+@media (min-width: 900px) {
+    /* For screens wider than 900px, set a different fixed width for the card content */
+    .card .card-content {
+        width: 1000px;
+    }
+}
+
+.row.text-center {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent elements from wrapping to a new row */
+    justify-content: flex-start; /* Align elements to the left */
+    overflow-x: auto; /* Enable horizontal scrolling if elements exceed the container width */
+}
+
+
+.row.text-center > div {
+    flex: 0 0 auto; /* Allow elements to have their own width */
+    text-align: center;
+    margin: 0; /* Remove the margin */
+}
+
+@media (max-width: 600px) {
+	.row.text-center > div {
+		width: calc(100% - 20px); /* Adjust the width for smaller screens */
+	}
+}
+
+@media (max-width: 400px) {
+	.row.text-center > div {
+		width: calc(50% - 20px); /* Adjust the width for even smaller screens */
+	}
+}
+
+
+
+
+.container .row {
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+#skills h4 {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+}
+
+.light,
+footer.page-footer .footer-copyright {
+	font-weight: 300;
+}
+
+.row .col.m2 {
+	width: 16.66667%;
+	margin-left: 0;
+}
+
+.row .col.s4 {
+	width: 20%;
+	margin-left: 0;
+}
+
+.row .col {
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 0.75rem;
+}
+
+#skills .col img.responsive-img {
+    margin: 0 auto;
+    max-height: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: left;
+    display: table-cell;
+}
+
+/* Add this style to position the skill bar at the bottom of the image */
+.responsive-img {
+	position: relative; /* Make sure the container is relative */
   }
   
-  .bottom-space {
-	height: 25px; /* Adjust the height as needed */
+  .skill-bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	background-color: #4CAF50; /* Customize the skill bar color */
+	transition: height 0.3s; /* Add a smooth transition effect */
+  }
+  
+  /* Show the skill bar when hovering over .responsive-img */
+  .responsive-img:hover + .skill-bar{
+	height: 8px; /* Customize the height of the skill bar */
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #008CBA;
+  }
+
+  .responsive-img:hover .overlay {
+	opacity: 0;
   }

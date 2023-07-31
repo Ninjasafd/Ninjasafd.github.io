@@ -3143,6 +3143,10 @@ video {
 	opacity: .4
 }
 
+.opacity-60 {
+	opacity: .6
+}
+
 .opacity-0 {
 	opacity: 0
 }

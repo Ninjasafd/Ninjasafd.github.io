@@ -1,10 +1,29 @@
-export default function Home() {
+import Head from 'next/head';
+import React from 'react';
+import Header from '../components/Header.tsx';
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">Welcome to My Portfolio!</h1>
-      <p className="mt-4 text-lg text-gray-600 text-balance">
-        Tailwind CSS and custom styles are working correctly!
-      </p>
-    </main>
+    <>
+    <Header />
+      <Head>
+        <title>Jeffrey Pan - Portfolio</title>
+        <meta name="description" content="Jeffrey Pan's personal portfolio showcasing projects, skills, and work experience." />
+        <link rel="icon" href="/icons/space-rainbow-ico.ico" type="image/x-icon" />
+      </Head>
+      <div>
+        <section id="hero">
+          <div className="relative rounded-full h-100 w-100 mx-auto border">
+            <img 
+              src="/icons/github-icon.jpg" 
+              alt="GitHub Icon" 
+              width="50" 
+              height="50" 
+              className="object-cover" 
+            />
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

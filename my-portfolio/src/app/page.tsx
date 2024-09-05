@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import Header from '../components/Header.tsx';
 import Hero from '../components/Hero';
+import About from '../components/About.tsx'
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       </Head>
       <Header />
       <Hero />
+      <About />
     </>
   );
 }

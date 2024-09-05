@@ -3,29 +3,40 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section id="header" className="text-center p-10">
-      <div className="relative rounded-full h-48 w-48 mx-auto border transition-opacity duration-3000">
-        <Image 
-          src="/space-rainbow-ico.ico" 
-          alt="drawn picture" 
-          layout="fill" 
-          className="absolute inset-0 object-cover w-full h-full rounded-full"
-        />
-      </div>
-      <div className="content mt-8">
-        <div className="inner">
-          <h2 className="text-4xl font-bold">Hello! I'm <span className="text-blue-500">Jeffrey Pan</span></h2>
-          <p className="mt-4 text-lg">Welcome to my website... It's still a work in progress</p>
+    <section 
+      id="hero" 
+      className="h-screen bg-cover bg-center flex items-center justify-center text-center p-10" 
+      style={{ backgroundImage: "url('/images/background_nebula.jpg')" }}
+    >
+      <div className="hero-content">
+        {/* Astronaut Image */}
+        <div className="relative rounded-full h-48 w-48 mx-auto border-4 border-white">
+          <Image 
+            src="/path_to_astronaut_image/astronaut.png" 
+            alt="Astronaut with face" 
+            layout="fill" 
+            className="absolute inset-0 object-cover w-full h-full rounded-full"
+          />
         </div>
+
+        {/* Main Text */}
+        <div className="content mt-8">
+          <div className="inner">
+            <h1 className="text-5xl sm:text-6xl font-bold text-white">Hello! I'm <span className="text-purple-400">Jeffrey Pan</span></h1>
+            <p className="mt-4 text-xl text-gray-300">Welcome to my space-themed portfolio!</p>
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="mt-8">
+          <ul className="flex justify-center space-x-6 text-lg">
+            <li><a href="#about" className="text-gray-300 hover:text-white">About</a></li>
+            <li><a href="#work" className="text-gray-300 hover:text-white">Work</a></li>
+            <li><a href="#skills" className="text-gray-300 hover:text-white">Skills</a></li>
+            <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav className="mt-8">
-        <ul className="flex justify-center space-x-6 text-lg">
-          <li><a href="#intro" className="hover:text-blue-500">About</a></li>
-          <li><a href="#work" className="hover:text-blue-500">Work</a></li>
-          <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
-          <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-        </ul>
-      </nav>
     </section>
   );
 }

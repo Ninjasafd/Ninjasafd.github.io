@@ -1,47 +1,46 @@
 import React from 'react';
-import Image from 'next/image';
+import { FaServer, FaLaptopCode, FaRobot, FaMobileAlt } from 'react-icons/fa';
+import AboutBox from './AboutBox';
 
 export default function About() {
     return (
-        <section id="about" className="py-20 bg-gray-900 text-white">
-            <div className="container mx-auto max-w-7xl px-10 flex flex-col md:flex-row items-center">
-                {/* Image Section */}
-                <div className="flex-shrink-0 mb-10 md:mb-0 md:mr-10 w-64 h-64 xl:w-80 xl:h-80">
-                    <Image
-                        src="/images/space-rainbow.jpg"
-                        alt="Jeffrey Pan"
-                        width={256}
-                        height={256}
-                        className="rounded-full md:rounded-lg object-cover w-full h-full"
-                    />
+        <section id="about" className="py-20 text-white">
+            <div className="container mx-auto max-w-7xl px-6 md:px-10">
+                {/* Overview Section */}
+                <div className="text-left mb-10">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">Overview</h2>
+                    <p className="text-lg md:text-xl leading-relaxed max-w-2xl">
+                        I’m Jeffrey Pan, currently a senior studying Computer Science & Mathematics at{' '}
+                        <a className="text-[#CFAE70] hover:underline" href="https://www.vanderbilt.edu" target="_blank" rel="noopener noreferrer">
+                            Vanderbilt University
+                        </a>. My key areas of expertise include <span className="text-[#25b2da]">Full Stack Development</span>,
+                        <span className="text-[#25b2da]"> Machine Learning</span>, and an interest in <span className="text-[#25b2da]">Cybersecurity</span> and
+                        <span className="text-[#25b2da]"> Mobile Development</span>.
+                    </p>
                 </div>
 
-                {/* Text Section */}
-                <div className="space-y-8 text-center md:text-left">
-                    <h4 className="text-4xl font-semibold">
-                        A <span className="underline decoration-[#20AAB1]/50">bit of</span> background
-                    </h4>
-                    <p className="text-lg leading-relaxed">
-                        Hello! I'm Jeffrey Pan, a senior studying Computer Science & Mathematics at{' '}
-                        <a
-                            className="text-[#CFAE70] hover:underline"
-                            href="https://www.vanderbilt.edu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Vanderbilt University
-                        </a>, while also working towards an M.S. in Computer Science. I have diligently built a solid
-                        foundation in <span className="text-[#25b2da] uppercase">Full Stack Development, artificial intelligence, and machine learning</span> 
-                        and I'm always excited to learn more! Recently, I've taken an interest in 
-                        <span className="text-[#25b2da] uppercase"> Cybersecurity and Mobile Development</span>.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                        I am driven by a constant desire to learn and grow, and I am always on the lookout for new opportunities 
-                        to further develop my skills, both professionally and technically. My commitment and passion for programming 
-                        are evident in the projects, internships, and coursework I have undertaken so far. The field of computer science 
-                        is always full of possibilities, and I am eager to continue nurturing my abilities to become a more knowledgeable 
-                        and well-rounded programmer and person.
-                    </p>
+                {/* Skills Section */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    <AboutBox
+                        title="Back-end Development"
+                        description="Experienced in building scalable server-side applications."
+                        Icon={FaServer}
+                    />
+                    <AboutBox
+                        title="Full Stack Development"
+                        description="Proficient in both frontend and backend development."
+                        Icon={FaLaptopCode}
+                    />
+                    <AboutBox
+                        title="Machine Learning"
+                        description="Building AI models for data analysis and real-world applications."
+                        Icon={FaRobot}
+                    />
+                    <AboutBox
+                        title="Mobile Development"
+                        description="Developing cross-platform mobile applications."
+                        Icon={FaMobileAlt}
+                    />
                 </div>
             </div>
         </section>

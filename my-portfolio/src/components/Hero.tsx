@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-// Function to generate a random hex color
+// Function to generate a random hex color for stars
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -39,38 +39,38 @@ export default function Hero() {
     );
   });
 
-
   return (
     <section
       id="hero"
-      className="text-center p-10 bg-black relative min-h-screen overflow-hidden"
+      className="text-center p-10 bg-black relative flex items-center justify-between px-6 md:px-10 min-h-screen"
     >
       {/* Star Background */}
       <div className="absolute inset-0 opacity-50 z-0">
         {stars}
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10">
-        <div className="relative rounded-full h-48 w-48 mx-auto border border-white transition-opacity duration-3000">
+      {/* Left Section: Intro & Astronaut */}
+      <div className="z-10 w-full md:w-1/2 flex flex-col items-start justify-center text-left space-y-6 md:ml-10">
+        {/* Astronaut */}
+        <div className="w-24 h-24 bg-blue-500 rounded-full relative overflow-hidden">
           <Image
-            src="/icons/space-rainbow-ico.ico"
-            alt="drawn picture"
+            src="/path/to/astronaut-illustration.png"
+            alt="Astronaut Illustration"
             layout="fill"
-            className="absolute inset-0 object-cover w-full h-full rounded-full"
+            objectFit="contain"
           />
         </div>
-        <div className="content mt-8">
-          <div className="inner">
-            <h2 className="text-4xl font-bold text-white">
-              Hello! I'm <span className="text-blue-500">Jeffrey Pan</span>
-            </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Welcome to my website... It's still a work in progress
-            </p>
-          </div>
-        </div>
-        <nav className="mt-8">
+
+        {/* Short Intro */}
+        <h2 className="text-6xl font-bold text-white">
+          Hello! I'm <span className="text-blue-500">Jeffrey</span>
+        </h2>
+        <p className="text-lg text-gray-300">
+          Welcome to my portfolio where I showcase my projects and work experience.
+        </p>
+
+        {/* Mobile Navigation */}
+        <nav className="mt-8 md:hidden">
           <ul className="flex justify-center space-x-6 text-lg text-gray-300">
             <li><a href="#intro" className="hover:text-blue-500">About</a></li>
             <li><a href="#work" className="hover:text-blue-500">Work</a></li>
@@ -78,6 +78,29 @@ export default function Hero() {
             <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
           </ul>
         </nav>
+      </div>
+
+      {/* Right Section: Planets and Stars */}
+      <div className="z-0 relative w-full md:w-1/2 h-full">
+        {/* Star Background */}
+        <div className="absolute inset-0 opacity-50 z-0">
+          {stars}
+        </div>
+        
+        {/* Planets */}
+        <div className="absolute top-1/4 left-5 planet planet-1"></div>
+        <div className="absolute bottom-20 right-10 planet planet-2"></div>
+
+        {/* Sun */}
+        <div className="absolute top-5 right-10 sun"></div>
+
+        {/* Moon with Craters */}
+        <div className="absolute top-1/4 left-1/3 moon">
+          <div className="crater crater-1"></div>
+          <div className="crater crater-2"></div>
+          <div className="crater crater-3"></div>
+          <div className="crater crater-4"></div>
+        </div>
       </div>
     </section>
   );

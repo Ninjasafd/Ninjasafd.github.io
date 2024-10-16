@@ -3,18 +3,19 @@ import React from 'react';
 import Header from '../components/Header.tsx';
 import Hero from '../components/Hero';
 import About from '../components/About.tsx'
+import WorkExperience from '../components/WorkExperience.tsx'
+import Skills from '../components/Skills.tsx'
+import Footer from '../components/Footer.tsx'
 
 export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>Jeffrey Pan - Portfolio</title>
-        <meta name="description" content="Jeffrey Pan's personal portfolio showcasing projects, skills, and work experience." />
-        <link rel="icon" href="/icons/space-rainbow-ico.ico" type="image/x-icon" />
-      </Head>
       <Header />
       <Hero />
       <About />
+      <WorkExperience />
+      <Skills />
+      <Footer />
     </>
   );
 }

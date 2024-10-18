@@ -54,7 +54,7 @@ export default function Hero() {
         {/* Astronaut */}
         <div className="w-24 h-24 bg-blue-500 rounded-full relative overflow-hidden">
           <Image
-            src="/path/to/astronaut-illustration.png"
+            src="/icons/space-rainbow-ico.ico"
             alt="Astronaut Illustration"
             layout="fill"
             objectFit="contain"
@@ -86,7 +86,7 @@ export default function Hero() {
         <div className="absolute inset-0 opacity-50 z-0">
           {stars}
         </div>
-        
+
         {/* Planets */}
         <div className="absolute top-1/4 left-5 planet planet-1"></div>
         <div className="absolute bottom-20 right-10 planet planet-2"></div>

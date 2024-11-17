@@ -8,15 +8,26 @@ import styles from './Header.module.css'; // Your CSS module for the header
 export default function Header() {
     const [activeLink, setActiveLink] = useState<string>('');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     // Function to update the active link
-    const handleLinkClick = (link: string): void => {  // Add typing to 'link' and return type 'void'
-        setActiveLink(link);
+    const handleLinkClick = (link: string): void => {
+        if (link === 'home') {
+            // Scroll to the top if Home is clicked
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            // Otherwise, set the active link as usual
+            setActiveLink(link);
+        }
     };
+
+    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseLeave = () => setIsHovered(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
 
     return (
         <header className={styles.header}>
@@ -32,8 +43,15 @@ export default function Header() {
                             height={40}
                             className="rounded-full"
                         />
-                        <span className="text-md lg:text-lg font-bold text-white font-inter space-glow">Jeffrey Pan</span>
+                        <span
+                            className={`${styles.name} text-md lg:text-lg font-bold font-inter`}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            Jeffrey Pan
+                        </span>
                     </a>
+
                 </div>
 
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
@@ -54,7 +72,7 @@ export default function Header() {
                             About
                         </a>
                         <a
-                            href="#experience"
+                            href="#work-experience"
                             onClick={() => handleLinkClick('experience')}
                             className={`${styles.navLink} ${activeLink === 'experience' ? styles.active : ''}`}
                         >
@@ -113,7 +131,7 @@ export default function Header() {
                                 About
                             </a>
                             <a
-                                href="#experience"
+                                href="#work-experience"
                                 className="hover:text-gray-300"
                                 onClick={toggleMenu} // Close the menu when clicked
                             >
@@ -127,6 +145,21 @@ export default function Header() {
                                 Skills
                             </a>
                         </nav>
+                    </div>
+                )}
+
+                {isHovered && (
+                    <div className={styles.shootingStars}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 )}
 

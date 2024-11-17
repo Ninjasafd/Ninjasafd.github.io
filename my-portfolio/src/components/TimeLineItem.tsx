@@ -10,7 +10,7 @@ interface TimelineItemProps {
     techStack: string[];
     description: string;
   };
-  isLeft: boolean; // Whether the item is on the left side
+  isLeft: boolean;
 }
 
 export default function TimelineItem({ experience, isLeft }: TimelineItemProps) {
@@ -18,8 +18,8 @@ export default function TimelineItem({ experience, isLeft }: TimelineItemProps) 
     <div className="relative mb-10 flex items-center justify-center w-full">
       {/* Date on the opposite side */}
       <div
-        className={`absolute ${isLeft ? 'right-[62%]' : 'left-[62%]'
-          } text-gray-400 text-sm`}
+        className={`absolute ${isLeft ? 'right-[55%]' : 'left-[55%]'
+          } text-gray-400 text-sm space-glow hidden md:block`} // Hidden on mobile (md: breakpoint)
         style={{
           top: '50%',
           transform: 'translateY(-50%)',
@@ -30,20 +30,20 @@ export default function TimelineItem({ experience, isLeft }: TimelineItemProps) 
 
       {/* Work Experience Content */}
       <div
-        className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-[45%] relative ${isLeft ? 'ml-auto' : 'mr-auto'
+        className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full w-1/2 md:w-[45%] relative ${isLeft ? 'ml-auto' : 'mr-auto'
           }`}
       >
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-2xl font-bold text-white">
           {experience.position}
         </h3>
-        <p className="text-lg font-medium text-[#CFAE70] mb-2">
+        <p className="text-md font-medium text-[#CFAE70] mb-2">
           {experience.company}
         </p>
 
         {/* Tech Stack */}
         <TechStack techStack={experience.techStack} />
 
-        <p className="text-sm text-gray-300 mt-4">{experience.description}</p>
+        <p className="text-sm font-semibold text-gray-300 mt-4">{experience.description}</p>
       </div>
 
       {/* Timeline Circle */}
@@ -62,6 +62,17 @@ export default function TimelineItem({ experience, isLeft }: TimelineItemProps) 
           alt={`${experience.company} logo`}
         />
       </span>
+
+      {/* Date for mobile view */}
+      <div
+        className="block md:hidden absolute left-4 text-gray-400 text-sm space-glow" // Visible on mobile, left aligned
+        style={{
+          top: '50%',
+          transform: 'translateY(-50%)',
+        }}
+      >
+        <p>{experience.duration}</p>
+      </div>
     </div>
   );
 }

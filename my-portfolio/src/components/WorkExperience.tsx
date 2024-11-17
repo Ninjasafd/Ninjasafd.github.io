@@ -89,7 +89,7 @@ import TimelineContainer from './TimeLineContainer';
 
 export default function WorkExperience() {
     return (
-        <section id="work-experience" className="py-20 bg-gray-900 text-white">
+        <section id="work-experience" className="py-20 text-white">
             <div className="container mx-auto max-w-7xl px-6">
                 {/* Title */}
                 <h2 className="text-4xl font-bold text-center mb-10">Work Experience</h2>

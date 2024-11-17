@@ -29,6 +29,11 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Star background */
 .star {
   position: absolute;
